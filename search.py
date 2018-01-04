@@ -21,6 +21,13 @@ string_json = soup.body.script.string.split("window._sharedData = ",1)[1][:-1]
 my_json = json.loads(string_json)
 link_num =  len(my_json["entry_data"]["ProfilePage"][0]["user"]["media"]["nodes"])
 
-# prints photo links
+reverse_links = []
 for num in range(0, link_num):
-    print my_json["entry_data"]["ProfilePage"][0]["user"]["media"]["nodes"][num]["display_src"]
+    ig_link = my_json["entry_data"]["ProfilePage"][0]["user"]["media"]["nodes"][num]["display_src"]
+    reverse_link = "https://www.google.com/searchbyimage?&image_url=" + ig_link
+    reverse_links.append(reverse_link)
+
+print reverse_links
+# from here we want to collect the top X links that the image was found in
+
+
