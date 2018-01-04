@@ -1,2 +1,6 @@
 # IG-reverse
-A script to reverse image search your Instagram photos
+A script to reverse image search Instagram photos.
+
+Usage:
+
+	python search.py <your username>
