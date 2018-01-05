@@ -10,7 +10,11 @@ sudo pip install filedepot
 sudo apt-get -y install libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk python-dev
 sudo pip install pillow
 
+# for screenshots
 sudo apt-get -y install chromium-chromedriver
 sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/bin/chromedriver
 
-
+# for flask
+sudo pip install flask
+export FLASK_APP=microblog.py
+#flask run
