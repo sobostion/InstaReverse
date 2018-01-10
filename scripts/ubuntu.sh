@@ -16,5 +16,8 @@ sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/bin/chromedriver
 
 # for flask
 sudo pip install flask
-export FLASK_APP=microblog.py
-#flask run
+export FLASK_APP=main.py
+(
+	cd ../app
+	flask run
+)
