@@ -14,8 +14,10 @@ sudo pip install pillow
 sudo apt-get -y install chromium-chromedriver
 sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/bin/chromedriver
 
+sudo mv ../config/nginx /etc/nginx/sites-available/default
+
 # for flask
-sudo pip install flask
+sudo pip install flask flask-WTF
 export FLASK_APP=main.py
 (
 	cd ../app
