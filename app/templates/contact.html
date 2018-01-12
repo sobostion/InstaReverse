@@ -1,48 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-   <body>
+  <head>
+    <title>Flask app</title>
+	<link rel="stylesheet" type="text/css" href="/static/main.css">
+  </head>
+  <body>
+    <header>
+      <div class="user">
+          <header class="user__header">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg" alt="" />
+              <h1 class="user__title">A lightweight and simple sign-up form</h1>
+          </header>
 
-      <h2 style = "text-align: center;">Contact Form</h2>
+          <form class="form">
+              <div class="form__group">
+                  <input type="text" placeholder="Username" class="form__input" />
+              </div>
 
-      {% for message in form.name.errors %}
-         <div>{{ message }}</div>
-      {% endfor %}
+              <div class="form__group">
+                  <input type="email" placeholder="Email" class="form__input" />
+              </div>
 
-      {% for message in form.email.errors %}
-         <div>{{ message }}</div>
-      {% endfor %}
+              <div class="form__group">
+                  <input type="password" placeholder="Password" class="form__input" />
+              </div>
 
-      <form action = "http://localhost:5000/contact" method = post>
-         <fieldset>
-            <legend>Contact Form</legend>
-            {{ form.hidden_tag() }}
-
-            <div style = font-size:20px; font-weight:bold; margin-left:150px;>
-               {{ form.name.label }}<br>
-               {{ form.name }}
-               <br>
-
-               {{ form.Gender.label }} {{ form.Gender }}
-               {{ form.Address.label }}<br>
-               {{ form.Address }}
-               <br>
-
-               {{ form.email.label }}<br>
-               {{ form.email }}
-               <br>
-
-               {{ form.Age.label }}<br>
-               {{ form.Age }}
-               <br>
-
-               {{ form.language.label }}<br>
-               {{ form.language }}
-               <br>
-               {{ form.submit }}
-            </div>
-
-         </fieldset>
-      </form>
-
-   </body>
+              <button class="btn" type="button">Register</button>
+          </form>
+      </div>
+    </header>
+  </body>
 </html>
