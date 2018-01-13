@@ -14,6 +14,8 @@ sudo pip install pillow
 sudo apt-get -y install chromium-chromedriver
 sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/bin/chromedriver
 
+# nginx setup
+sudo apt-get -y install nginx
 sudo mv ../config/nginx /etc/nginx/sites-available/default
 
 # for flask
