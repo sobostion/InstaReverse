@@ -14,5 +14,7 @@ server {
         }
         location /static/css {
                 include  /etc/nginx/mime.types;
+                add_header 'Cache-Control' 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0';
+                expires off;
         }
 }
