@@ -12,10 +12,6 @@ server {
                 include  /etc/nginx/mime.types;
                 proxy_pass http://127.0.0.1:5000;
         }
-        location /contact {
-                include  /etc/nginx/mime.types;
-                proxy_pass http://127.0.0.1:5000/contact;
-        }
         location /static/css {
                 include  /etc/nginx/mime.types;
         }
