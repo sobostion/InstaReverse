@@ -1,0 +1,11 @@
+$('#sebimg').on({
+       'click': function() {
+           $.ajax({
+              type: 'POST',
+              url: 'localhost/reverse',
+              data: { img_link: $('#sebimg').attr('src') },
+              success: function(data){
+              }
+           });
+        }
+    });

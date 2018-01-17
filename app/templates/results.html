@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    padding: 20px;
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+}
+
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+body {
+    font-family: $font-family;
+    font-size: $font-size;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 50px;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.grid-item {
+  padding: 20px;
+  font-size: 30px;
+  
+}
+
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+<script data-require="jquery@3.0.0" data-semver="3.0.0" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+  <script>
+    var sebarray = [];
+    sebarray.push("start");
+    function sebFunction(input) {
+	console.log(input);
+    };
+    $.ajax({
+      url: "https://igpi.ga/{{ username }}/media",
+      dataType: "jsonp",
+      data: {
+        count: 24
+      },
+      success: function(json) {
+        for (var i in json.posts) {
+          var img = document.createElement("IMG");
+
+          img.src = json.posts[i].display_url;
+	 // $("img").attr('onClick', "sebFunction('" + i + "')");
+	  sebarray.push(img);
+          document.body.appendChild(img);
+        }
+	
+	$.each(sebarray, function(index, value) {
+                $(value).attr('onClick', "sebFunction('" + index + "')");
+        });
+      }
+    });
+    
+  </script>
+</div>
+
+
+</body>
+</html>

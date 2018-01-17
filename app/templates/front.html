@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Flask app</title>
+    <title>InstaReverse</title>
     <link rel="stylesheet" type="text/css" href="/static/main.css">
   </head>
       <div class="user">
           <header class="user__header">
               <img src="/static/reverse2.png" alt="" />
-              <h1 class="user__title">Instagram Reverse Search</h1>
+              <h1 class="user__title">instagram reverse search</h1>
           </header>
 
-          <form class="form">
+          <form class="form" action="/results" method="GET">
               <div class="form__group">
-                  <input type="text" placeholder="Username" class="form__input" />
+                  <input name="username" type="text" placeholder="Username" class="form__input" />
               </div>
 
               <button class="btn" type="submit">Search</button>
